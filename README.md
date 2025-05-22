@@ -42,5 +42,23 @@ Run the script from R or RStudio:
 
 ```r
 source("download_trypanosoma_18S.R")
+```
+
+## Script: `rename_fasta_headers.sh`
+
+This Bash script processes a FASTA file by shortening long header lines and replacing them with unique, simplified identifiers. It also generates a mapping file to preserve the link between the original and shortened IDs.
+
+### Features
+
+- Truncates complex FASTA headers into short IDs (max 50 characters)
+- Ensures uniqueness with an internal counter
+- Generates a CSV map linking `original_id` → `short_id`
+
+### Usage
+
+```bash
+chmod +x rename_fasta_headers.sh
+./rename_fasta_headers.sh
+```
 
 
