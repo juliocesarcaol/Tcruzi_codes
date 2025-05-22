@@ -23,5 +23,24 @@ This workflow is designed for bioinformatics analysis of *Trypanosoma cruzi*, th
   - Includes `makeblastdb`, `blastn`, `blastp`, etc.
 - Python 3 (optional, for processing or integration scripts)
 
+## Script: `download_trypanosoma_18S.R`
+
+This script performs a batch download of 18S rRNA sequences (SSU) for the genus *Trypanosoma* from the NCBI Nucleotide database using the `rentrez` R package.
+
+### Features
+
+- Retrieves up to 10,000 sequences matching a specific query (length: 100–5000 bp).
+- Exports sequences in FASTA format.
+- Extracts metadata (accession, organism name, sequence definition, and length) from GenBank records.
+- Saves metadata to a CSV file.
+
+### Usage
+
+Make sure you have R and the required packages (`rentrez`, `tibble`, `stringr`) installed.
+
+Run the script from R or RStudio:
+
+```r
+source("download_trypanosoma_18S.R")
 
 
